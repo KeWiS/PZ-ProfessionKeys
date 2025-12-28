@@ -1,0 +1,9 @@
+id=ProfessionKeys
+name=Profession Keys
+description=This mod allows for automatic profession building key creation when your character has that profession and enters the building.
+poster=poster.png
+icon=poster.png
+author=KeWiS
+modversion=0.1-preview
+versionMin=42.0
+versionMax=42.12
