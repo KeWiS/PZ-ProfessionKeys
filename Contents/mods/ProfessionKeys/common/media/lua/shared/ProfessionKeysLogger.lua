@@ -1,7 +1,7 @@
 ProfessionKeysLogger = ProfessionKeysLogger or {}
 
-function ProfessionKeysLogger.log(message)
+function ProfessionKeysLogger.log(buildingType, message)
     if isDebugEnabled then
-        print("[ProfessionKeys] " .. message)
+        print("[ProfessionKeys] " .. buildingType .. ": " .. message)
     end
 end
