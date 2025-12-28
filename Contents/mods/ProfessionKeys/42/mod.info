@@ -4,3 +4,4 @@ description=This mod allows for automatic profession building key creation when 
 author=KeWiS
 modversion=0.1-preview
 versionMin=42.0
+versionMax=42.12
