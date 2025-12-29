@@ -8,7 +8,15 @@ PROFESSION_KEYS_BUILDINGS = {
         rooms = {
             policestorage = true,
             policelocker = true,
-            policeoffice = true,
+            policeoffice = true
+        }
+    },
+    FIRE_STATION = {
+        profession = "fireofficer",
+        name = "Fire Station",
+        rooms = {
+            firestorage = true,
+            firegarage = true
         }
     }
 }
