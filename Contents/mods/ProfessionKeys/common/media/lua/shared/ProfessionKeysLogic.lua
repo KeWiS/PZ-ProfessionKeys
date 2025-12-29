@@ -1,5 +1,4 @@
 ProfessionKeysLogic = ProfessionKeysLogic or {}
-ProfessionKeysLastBuilding = {}
 
 PROFESSION_KEYS_BUILDINGS = {
     POLICE_STATION = {
@@ -27,6 +26,8 @@ local KEY_MESSAGES = {
     "You must have had this key already.",
 }
 local MODDATA_KEY = "ProfessionKeys"
+
+local ProfessionKeysLastBuilding = {}
 
 function ProfessionKeysLogic.getBuildingDefForProfession(profession)
     for _, def in pairs(PROFESSION_KEYS_BUILDINGS) do
@@ -133,7 +134,7 @@ local function isProfessionBuildingCached(building, buildingDefinition)
 end
 
 function ProfessionKeysLogic.checkBuildingCorrectness(building, playerId, buildingDefinition)
-    if not building or ProfessionKeysLastBuilding[playerId] == building then
+    if ProfessionKeysLastBuilding[playerId] == building then
         return false
     end
 
@@ -162,10 +163,10 @@ function ProfessionKeysLogic.createAndAssignBuildingKey(building, player, buildi
     local keyId = building:getDef():getKeyId()
     local key = player:getInventory():AddItem("Base.Key1")
 
-    key:setKeyId(keyId)
     key:setName("Key - " .. buildingName)
 
     if keyId and key then
+        key:setKeyId(keyId)
         storeProfessionBuildingId(keyId)
         showFoundKeyMessage(player)
         ProfessionKeysLogger.log(buildingName, "Key given with keyId: " .. keyId)
