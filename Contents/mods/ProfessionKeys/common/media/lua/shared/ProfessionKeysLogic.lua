@@ -58,11 +58,6 @@ function ProfessionKeysLogic.isValidPlayer(player, buildingName)
 end
 
 local function getBuildingRooms(building, buildingName)
-    if not building then
-        ProfessionKeysLogger.log(buildingName, "Building is nil.")
-        return
-    end
-
     local def = building:getDef()
     if not def then
         ProfessionKeysLogger.log(buildingName, "Building def is nil.")
@@ -76,6 +71,13 @@ local function getBuildingRooms(building, buildingName)
     end
 
     return rooms
+end
+
+local function getBuildingCache()
+    local modData = getModData()
+    modData.buildingCache = modData.buildingCache or {}
+
+    return modData.buildingCache
 end
 
 local function isProfessionBuilding(building, buildingDefinition)
@@ -104,8 +106,26 @@ local function isProfessionBuilding(building, buildingDefinition)
     return false
 end
 
+local function isProfessionBuildingCached(building, buildingDefinition)
+    local cache = getBuildingCache()
+    local keyId = building:getDef():getKeyId()
+
+    if cache[keyId] and cache[keyId]["profession"] == buildingDefinition.profession then
+        ProfessionKeysLogger.log(buildingDefinition.name, "Reading building classification from cache.")
+        return cache[keyId].classification
+    end
+
+    local calculatedClassification = isProfessionBuilding(building, buildingDefinition)
+    cache[keyId] = {
+        classification = calculatedClassification,
+        profession = buildingDefinition.profession
+    }
+
+    return calculatedClassification
+end
+
 function ProfessionKeysLogic.checkBuildingCorrectness(building, playerId, buildingDefinition)
-    if ProfessionKeysLastBuilding[playerId] == building then
+    if not building or ProfessionKeysLastBuilding[playerId] == building then
         return false
     end
 
@@ -113,7 +133,7 @@ function ProfessionKeysLogic.checkBuildingCorrectness(building, playerId, buildi
 
     ProfessionKeysLogger.log(buildingDefinition.name, "Player entered new building.")
 
-    if not isProfessionBuilding(building, buildingDefinition) then
+    if not isProfessionBuildingCached(building, buildingDefinition) then
         ProfessionKeysLogger.log(buildingDefinition.name, "Entered building is NOT character profession building.")
         return false
     end
