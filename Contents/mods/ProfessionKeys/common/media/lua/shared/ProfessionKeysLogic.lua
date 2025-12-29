@@ -1,5 +1,4 @@
 ProfessionKeysLogic = ProfessionKeysLogic or {}
-ProfessionKeysLastBuilding = {}
 
 PROFESSION_KEYS_BUILDINGS = {
     POLICE_STATION = {
@@ -27,6 +26,8 @@ local KEY_MESSAGES = {
     "You must have had this key already.",
 }
 local MODDATA_KEY = "ProfessionKeys"
+
+local ProfessionKeysLastBuilding = {}
 
 function ProfessionKeysLogic.getBuildingDefForProfession(profession)
     for _, def in pairs(PROFESSION_KEYS_BUILDINGS) do
