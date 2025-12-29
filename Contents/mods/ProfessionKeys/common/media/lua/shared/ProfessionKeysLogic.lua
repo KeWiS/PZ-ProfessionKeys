@@ -134,7 +134,7 @@ local function isProfessionBuildingCached(building, buildingDefinition)
 end
 
 function ProfessionKeysLogic.checkBuildingCorrectness(building, playerId, buildingDefinition)
-    if not building or ProfessionKeysLastBuilding[playerId] == building then
+    if ProfessionKeysLastBuilding[playerId] == building then
         return false
     end
 
