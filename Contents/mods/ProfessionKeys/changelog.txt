@@ -1,0 +1,28 @@
+v1.0
+• Initial release
+• Police officers gain access to police station
+• Firefighters gain access to fire station
+• First valid station that player enters is permanently assigned by generating building key
+• Persistent across save/load
+• Immersive in-world notification
+• Build 42 compatible
+
+v0.9
+• Bug fixes and code polishing before release
+
+v0.5
+• Added support for fire officers
+
+v0.4
+• Caching of building classification with profession recognition
+
+v0.3
+• Big refactor of code, project structure changed
+• Added random messages on key generation for better immersion
+
+v0.2
+• Introduced key generation memory - game now remembers that key was already generated
+
+v0.1-preview
+• First version
+• Primitive key generation in police station for police officer
