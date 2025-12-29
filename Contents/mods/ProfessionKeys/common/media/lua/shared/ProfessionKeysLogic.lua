@@ -163,10 +163,10 @@ function ProfessionKeysLogic.createAndAssignBuildingKey(building, player, buildi
     local keyId = building:getDef():getKeyId()
     local key = player:getInventory():AddItem("Base.Key1")
 
-    key:setKeyId(keyId)
     key:setName("Key - " .. buildingName)
 
     if keyId and key then
+        key:setKeyId(keyId)
         storeProfessionBuildingId(keyId)
         showFoundKeyMessage(player)
         ProfessionKeysLogger.log(buildingName, "Key given with keyId: " .. keyId)
