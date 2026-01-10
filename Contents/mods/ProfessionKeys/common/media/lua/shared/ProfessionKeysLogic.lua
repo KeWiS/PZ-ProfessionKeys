@@ -100,7 +100,7 @@ local function isProfessionBuilding(building, buildingDefinition)
 
         if name then
             local roomNameLower = string.lower(name)
-            ProfessionKeysLogger.log(buildingDefinition.name, "Room found: " .. roomNameLower)
+            ProfessionKeysLogger.logOnlyMessage("Room found: " .. roomNameLower)
 
             if buildingDefinition.rooms[roomNameLower] then
                 ProfessionKeysLogger.log(buildingDefinition.name, "Valid room detected: " .. roomNameLower)
