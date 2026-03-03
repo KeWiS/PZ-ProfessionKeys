@@ -1,6 +1,182 @@
-version=1.2
+version=1
 id=3633974332
 title=[B42.14+] Profession Keys
-description=This mod allows for automatic profession building key creation when your character has that profession and enters the building.
+description=Do you find it weird that some professions do not have keys to their profession building?
+
+description=I created this mod because while playing Week One, I kept thinking that a police officer
+
+description=before the apocalypse should realistically have access to the police station and its armory.
+
+description=
+
+description=After doing some work on it for my own playthrough, I decided to clean it up and share it
+
+description=with the community.
+
+description=
+
+description=This mod gives profession-based access to service buildings in a simple and safe way.
+
+description=
+
+description=
+
+description=CURRENT FEATURES
+
+description==================
+
+description=
+
+description=• Police officers can gain access to a police station
+
+description=• Firefighters can gain access to a fire station
+
+description=
+
+description=When you enter a valid building for your profession for the first time, the game gives
+
+description=your character the correct building key.
+
+description=
+
+description=A short message is shown to indicate that the key was found.
+
+description=
+
+description=Only one building is ever assigned.
+
+description=The first valid station you enter is the one you keep for the rest of the save.
+
+description=
+
+description=
+
+description=RULES AND LIMITATIONS
+
+description======================
+
+description=
+
+description=• Only one building per profession
+
+description=• No duplicate keys
+
+description=• Other stations stay locked
+
+description=• Uses the correct building key ID (same as debug-spawned keys)
+
+description=• Fully persistent across save/load
+
+description=
+
+description=The mod does not give free access at spawn and does not unlock doors by script.
+
+description=It simply gives the proper key when it makes sense.
+
+description=
+
+description=
+
+description=HOW BUILDINGS ARE DETECTED
+
+description===========================
+
+description=
+
+description=• Buildings are detected by their internal room layout
+
+description=• No hardcoded map names
+
+description=• No coordinates or zones
+
+description=• Works on vanilla and modded maps (as long as rooms are named properly)
+
+description=
+
+description=
+
+description=SUPPORTED PROFESSIONS
+
+description======================
+
+description=
+
+description=• Police Officer
+
+description=• Fire Officer
+
+description=
+
+description=More professions may be added later.
+
+description=
+
+description=
+
+description=COMPATIBILITY AND TESTING
+
+description==========================
+
+description=
+
+description=• Tested on Build 42.12 and Build 42.13
+
+description=• Can be added to an existing save
+
+description=• Compatible with every mod I tested (I play with 100+ active mods)
+
+description=• I did not test it on multiplayer. Once I do, I will update the mod or leave information here that it works.
+
+description=
+
+description=The mod does not modify vanilla data or override existing systems, which makes it safe
+
+description=to use alongside other mods.
+
+description=
+
+description=
+
+description=POTENTIAL ADDITIONS
+
+description==================
+
+description=
+
+description=• More professions (doctor, mechanic etc.)
+
+description=• Profession car keys
+
+description=• Sandbox options
+
+description=• Improvements based on feedback
+
+description=• Bug fixes if issues are found
+
+description=
+
+description=
+
+description=Specifically requested features:
+
+description=• Lumberjack with access to McCoy facilities (loggingwarehouse, loggingtruck and loggingfactory).
+
+description=• Burger flipper with access to spiffo restaurants (spiffo_dining, spiffosstorage and spiffoskitchen)
+
+description=• Mechanic with access to mechanics workshops (carsupply and mechanics)
+
+description=• Nurse and doctor with access to hospitals (unsure of room names)
+
+description=
+
+description=NOTES
+
+description======
+
+description=
+
+description=If something does not work on a specific map, feel free to leave a comment with details or preferably in relevant pinned discussion sections.
+
+description=If you would like to contribute and provide translations for in-game messages shown when player enters a building let me know in "Contributions" discussion!
 tags=Build 42;Items;Realistic;QoL
 visibility=public
