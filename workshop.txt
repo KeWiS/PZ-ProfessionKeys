@@ -155,8 +155,6 @@ description=• Bug fixes if issues are found
 
 description=
 
-description=
-
 description=Specifically requested features:
 
 description=• Lumberjack with access to McCoy facilities (loggingwarehouse, loggingtruck and loggingfactory).
@@ -166,6 +164,8 @@ description=• Burger flipper with access to spiffo restaurants (spiffo_dining,
 description=• Mechanic with access to mechanics workshops (carsupply and mechanics)
 
 description=• Nurse and doctor with access to hospitals (unsure of room names)
+
+description=
 
 description=
 
