@@ -1,6 +1,6 @@
 version=1.3
 id=3633974332
-title=[42.20+ (STABLE)] Profession Keys
+title=[42.20+ STABLE] Profession Keys
 description=Do you find it weird that some professions do not have keys to their profession building?
 
 description=I created this mod because while playing Week One, I kept thinking that a police officer
